@@ -14,11 +14,11 @@ class Card extends Component {
     const { name } = event.target
     this.setState({
       [name]: !this.state[name]
-    })
+    });
   };
 
 render() {
-  const {title, author, description, id, pages, published, stars, short_desc} = this.props;
+  const {title, author, description, id, pages, published, stars, short_desc, remove} = this.props;
   const {showInfo, showDesc} = this.state;
   return (
     <div key={id}>
@@ -39,6 +39,7 @@ render() {
         <p>{description}</p>
         </div>
       </div>
+      <button onClick={() => remove(id)}>BOO!</button>
     </div>
     )
   }
