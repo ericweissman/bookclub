@@ -1,0 +1,17 @@
+.hidden {
+   display:none;
+}
+
+.book-card {
+  margin: 20px 15px;
+  width: 165px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  h3 {
+    color: red;
+  }
+}
