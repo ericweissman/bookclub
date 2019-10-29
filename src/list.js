@@ -1117,7 +1117,7 @@ const list = [
   },
 ]
 
-export const books = list.map((book, i) => {
+export const allBooks = list.map((book, i) => {
   return {...book, id: i + 1}
 });
 
@@ -1128,4 +1128,4 @@ const randomize = (books) => {
   }
 }
 
-randomize(books);
+randomize(allBooks);
