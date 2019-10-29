@@ -1,33 +1,31 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../App/App.css';
 import BookArea from '../BookArea/BookArea.js'
-import { books } from '../list.js'
+import { allBooks } from '../list.js'
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      books
-    }
-  }
+const App = () => {
+  const [books, setBooks] = useState([])
 
-  removeBook = (id) => {
-    const books = this.state.books.filter(book => book.id !== id);
-    this.setState({books})
+  const removeBook = (id) => {
+    const cleanedBooks = books.filter(book => book.id !== id);
+    setBooks(cleanedBooks)
   }
+  
+  const unread = books.filter(book => !book.read);
 
-  render() {
-    const unread = this.state.books.filter(book => !book.read);
-    return (
-      <div className="App">
-        <h1>bookclub.</h1>
-        <BookArea
-          books={unread}
-          remove={this.removeBook}
-        />
-      </div>
-    )
-  }
+  useEffect(() => {
+    setBooks(allBooks);
+  })
+
+  return (
+    <div className="App">
+      <h1>bookclub.</h1>
+      <BookArea
+        books={unread}
+        remove={removeBook}
+      />
+    </div>
+  )
 }
 
 export default App;
