@@ -4,7 +4,7 @@ import '../Info/Info.scss'
 
 
 const Info = (props) => {
-  const {title, author, description, id, pages, published, stars, short_desc, remove, img, showInfo} = props;
+  const {title, author, description, id, pages, published, stars, short_desc, remove, img, showInfo, handleChange} = props;
   return ReactDOM.createPortal(
     <div className={showInfo ? 'modal' : 'hidden'}>
       <div className="info">
@@ -19,7 +19,7 @@ const Info = (props) => {
           <p>{short_desc}</p>
           <p>{description}</p>
         </div>
-        <button name="showInfo" onClick={(event) => props.handleChange(event)}>Go Back</button>
+        <button name="showInfo" onClick={(event) => handleChange(event)}>Go Back</button>
       </div>
     </div>,
     document.getElementById('portal-root')
