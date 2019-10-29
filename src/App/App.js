@@ -4,18 +4,15 @@ import BookArea from '../BookArea/BookArea.js'
 import { allBooks } from '../list.js'
 
 const App = () => {
-  const [books, setBooks] = useState([])
+  const [books, setBooks] = useState(allBooks)
 
   const removeBook = (id) => {
     const cleanedBooks = books.filter(book => book.id !== id);
-    setBooks(cleanedBooks)
+    setBooks(cleanedBooks);
   }
-  
+
   const unread = books.filter(book => !book.read);
 
-  useEffect(() => {
-    setBooks(allBooks);
-  })
 
   return (
     <div className="App">
