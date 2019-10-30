@@ -46,12 +46,12 @@
 .short-desc {
   font-style: italic;
   overflow-y: scroll;
-  max-height: 29%;
+  max-height: 100px;
 }
 .long-desc {
     overflow-y: scroll;
     text-align: left;
-    max-height: 80%;
+    max-height: 180px;
     margin: 20px 0;
   }
 }
