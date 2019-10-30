@@ -17,7 +17,6 @@ const Card = (props) => {
 
   const cardStyle = {
     backgroundImage: `url(${img})`,
-    backgroundColor: 'black',
     opactiy: '0.4'
   }
 
