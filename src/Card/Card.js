@@ -4,7 +4,7 @@ import Info from '../Info/Info.js'
 const Card = (props) => {
   const [showDesc, setShowDesc] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
-  const {title, author, description, id, pages, published, stars, short_desc, remove, img} = props;
+  const {id, remove} = props;
 
   const handleChange = (event) => {
     const { name } = event.target
@@ -16,21 +16,21 @@ const Card = (props) => {
   };
 
   const cardStyle = {
-    backgroundImage: `url(${img})`,
+    backgroundImage: `url(../../../photos/${id}.jpeg)`,
     opactiy: '0.4'
   }
 
   const removeBtnStyle = {
     height: '35px',
     width: '35px',
-    backgroundImage: `url('../../../assets/icon.svg')`,
+    backgroundImage: `url('../../../icons/icon.svg')`,
     cursor: 'pointer'
   }
 
   const showInfoStyle = {
     height: '35px',
     width: '35px',
-    backgroundImage: `url('../../../assets/info.svg')`,
+    backgroundImage: `url('../../../icons/info.svg')`,
     cursor: 'pointer',
   }
 
