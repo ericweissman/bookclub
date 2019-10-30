@@ -15,8 +15,8 @@ const Info = (props) => {
           <p>{stars} stars</p>
         </div>
         <div className="descriptions">
-          <p>{short_desc}</p>
-          <p>{description}</p>
+          <p className="short-desc">{short_desc}</p>
+          <p className="long-desc">{description}</p>
         </div>
         <button name="showInfo" onClick={(event) => handleChange(event)}>Go Back</button>
       </div>
