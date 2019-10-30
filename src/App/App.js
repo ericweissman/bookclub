@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import '../App/App.css';
 import BookArea from '../BookArea/BookArea.js'
 import { allBooks } from '../list.js'
 

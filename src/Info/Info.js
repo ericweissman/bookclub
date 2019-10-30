@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '../Info/Info.scss'
 
 
 const Info = (props) => {

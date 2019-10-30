@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import '../Card/Card.scss'
 import Info from '../Info/Info.js'
 
 const Card = (props) => {
@@ -16,22 +15,39 @@ const Card = (props) => {
     }
   };
 
-  const style = {
-    backgroundImage: `url(${img})`
+  const cardStyle = {
+    backgroundImage: `url(${img})`,
+    backgroundColor: 'black',
+    opactiy: '0.4'
   }
 
-  return (
-    <div key={id} className="book-card" style={style}>
-      <div>
-        <button name="showInfo" onClick={(event) => handleChange(event)}>Show Info</button>
-        <button onClick={() => remove(id)}>BOO!</button>
-      </div>
+  const removeBtnStyle = {
+    height: '35px',
+    width: '35px',
+    backgroundImage: `url('../../../assets/icon.svg')`,
+    cursor: 'pointer'
+  }
 
+  const showInfoStyle = {
+    height: '35px',
+    width: '35px',
+    backgroundImage: `url('../../../assets/info.svg')`,
+    cursor: 'pointer',
+  }
+
+
+
+  return (
+    <div key={id} className="book-card" style={cardStyle}>
       <Info
         {...props}
         handleChange={handleChange}
         showInfo={showInfo}
       />
+      <div className="buttons">
+        <div style={showInfoStyle} name="showInfo" onClick={(event) => handleChange(event)}></div>
+        <div  style={removeBtnStyle} onClick={() => remove(id)}></div>
+      </div>
     </div>
     )
   }
