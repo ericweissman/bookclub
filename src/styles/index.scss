@@ -11,3 +11,11 @@
   box-sizing: border-box;
   font-family: $secondary-font;
 }
+
+body {
+    background-image: url('https://images.unsplash.com/photo-1530445007902-6a7a5743b69e?ixlib=rb-1.2.1&auto=format&fit=crop&w=963&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
