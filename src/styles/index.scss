@@ -1,0 +1,13 @@
+@import '/variables';
+@import '../App/App.scss';
+@import '../BookArea/BookArea.scss';
+@import '../Card/Card.scss';
+@import '../Info/Info.scss';
+@import url('https://fonts.googleapis.com/css?family=Lobster|Open+Sans:400,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $secondary-font;
+}
